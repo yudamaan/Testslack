@@ -29,7 +29,7 @@ jobs:
         # This data can be any valid JSON from a previous step in the GitHub Action
         payload: |
           {
-            "message": "@here core update will be getting its latest update in the next few minutes. Please hold off untill we are done"
+            "message": "core will be getting its latest update in the next minute or two. Please hold off untill we are done"
           }
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
