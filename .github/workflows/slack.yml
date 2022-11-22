@@ -23,14 +23,5 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Send custom JSON data to Slack workflow
-      id: slack
-      uses: slackapi/slack-github-action@v1.22.0
-      with:
-        # This data can be any valid JSON from a previous step in the GitHub Action
-        payload: |
-          {
-            "message": "core will be getting its latest update in the next minute or two. Please hold off untill we are done"
-          }
-      env:
-        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    - name: Test Var
+    - run: print ${{ github.event.inputs.ref }} 
